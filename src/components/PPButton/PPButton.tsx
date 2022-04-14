@@ -8,11 +8,15 @@ export interface PPButtonProps {
   onPress?: () => void;
   text?: string;
   disabled?: boolean;
+  bgColor?: string;
+  tintColor?: string;
 }
 export const PPButton: React.FC<PPButtonProps> = ({
   onPress,
   text,
   disabled,
+  bgColor,
+  tintColor,
 }) => {
   const style = useStyle(PPButtonStyle);
 
@@ -20,9 +24,13 @@ export const PPButton: React.FC<PPButtonProps> = ({
     <TouchableOpacity
       disabled={disabled}
       onPress={onPress}
-      style={[style.container, disabled && style.disabled]}
+      style={[
+        style.container,
+        bgColor ? { backgroundColor: bgColor } : {},
+        disabled && style.disabled,
+      ]}
     >
-      <PPText color="white" weight="bold">
+      <PPText color={tintColor || "white"} weight="bold">
         {text}
       </PPText>
     </TouchableOpacity>

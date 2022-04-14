@@ -11,7 +11,7 @@ export const PPSectionHeaderStyle = (
   return StyleSheet.create({
     wrapperSubTitle: {
       paddingTop: theme.spaces.space_4,
-      paddingBottom: theme.spaces.space_6,
+      paddingBottom: theme.spaces.space_5,
     },
   });
 };

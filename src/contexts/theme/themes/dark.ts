@@ -1,34 +1,38 @@
-import {ITheme, IThemeColor, IThemeFont, IThemeSpace} from '../type';
+import {
+  ThemeProps,
+  ThemeColorProps,
+  ThemeFontProps,
+  ThemeSpaceProps,
+} from "../type";
+const colors: ThemeColorProps = {
+  primary: "rgba(1,176,156,1)",
 
-const colors: IThemeColor = {
-  primary: 'rgba(1,176,156,1)',
+  secundary: "rgba(255,192,125,1)",
 
-  secundary: 'rgba(255,192,125,1)',
+  background: "#111111",
+  on_background_primary: "rgba(255,255,255,1)",
+  on_background_secundary: "rgba(255,255,255,0.5)",
+  on_background_disable: "rgba(255,255,255,0.3)",
 
-  background: '#111111',
-  on_background_primary: 'rgba(255,255,255,1)',
-  on_background_secundary: 'rgba(255,255,255,0.5)',
-  on_background_disable: 'rgba(255,255,255,0.3)',
+  surface: "#222",
+  on_surface_primary: "rgba(255,255,255,1)",
+  on_surface_secundary: "rgba(255,255,255,0.5)",
+  on_surface_disable: "rgba(255,255,255,0.3)",
 
-  surface: '#222',
-  on_surface_primary: 'rgba(255,255,255,1)',
-  on_surface_secundary: 'rgba(255,255,255,0.5)',
-  on_surface_disable: 'rgba(255,255,255,0.3)',
+  input: "#F7F7F7",
+  on_input_primary: "rgba(0,0,0,1)",
+  on_input_placeholder: "#989898",
 
-  input: '#F7F7F7',
-  on_input_primary: 'rgba(0,0,0,1)',
-  on_input_placeholder: '#989898',
+  shadow: "rgba(0, 0, 0, 0.1)",
 
-  shadow: 'rgba(0, 0, 0, 0.1)',
+  success: "rgba(106, 194,89,0.2)",
+  on_success_primary: "rgba(106, 194,89,1)",
 
-  success: 'rgba(106, 194,89,0.2)',
-  on_success_primary: 'rgba(106, 194,89,1)',
-
-  danger: 'rgba(255, 0,0,0.2)',
-  on_danger_primary: 'rgba(255, 0,0,1)',
+  danger: "rgba(255, 0,0,0.2)",
+  on_danger_primary: "rgba(255, 0,0,1)",
 };
 
-const spaces: IThemeSpace = {
+const spaces: ThemeSpaceProps = {
   space_1: 4,
   space_2: 6,
   space_3: 12,
@@ -39,7 +43,7 @@ const spaces: IThemeSpace = {
   space_8: 48,
 };
 
-const fonts: IThemeFont = {
+const fonts: ThemeFontProps = {
   heading_1: 30,
   heading_2: 26,
   heading_3: 22,
@@ -49,8 +53,8 @@ const fonts: IThemeFont = {
   caption: 10,
 };
 
-export const ThemeDark: ITheme = {
-  discriminator: 'dark',
+export const ThemeDark: ThemeProps = {
+  discriminator: "dark",
   colors,
   spaces,
   fonts,

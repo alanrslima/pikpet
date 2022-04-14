@@ -1,9 +1,8 @@
 import React from "react";
 import { PPImage, PPSectionHeader, PPView } from "../../components";
 import BulldogImg from "../../assets/images/bulldog.png";
-import { useStyle, useTheme } from "../../hooks";
+import { useStyle } from "../../hooks";
 import { HomeStyle } from "./Home.style";
-import { PPText } from "../../components/PPText/PPText";
 import { PPButton } from "../../components/PPButton/PPButton";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
