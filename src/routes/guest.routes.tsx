@@ -1,9 +1,9 @@
 import * as React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { SignUp } from "../pages/Guest/SignUp/SignUp";
-import { SignIn } from "../pages/Guest/SignIn/SignIn";
-import { Main } from "../pages/Guest/Main/Main";
-import { ForgetPasswordEmail } from "../pages/Guest/ForgetPasswordEmail/ForgetPasswordEmail";
+import { SignUp } from "../screens/Guest/SignUp/SignUp";
+import { SignIn } from "../screens/Guest/SignIn/SignIn";
+import { Main } from "../screens/Guest/Main/Main";
+import { ForgetPasswordEmail } from "../screens/Guest/ForgetPasswordEmail/ForgetPasswordEmail";
 
 export type GuestStackParamList = {
   Main: undefined;
