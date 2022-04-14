@@ -1,5 +1,5 @@
 import { StyleProp, StyleSheet, ViewStyle } from "react-native";
-import { ThemeProps } from "../../contexts/theme/type";
+import { ThemeProps } from "../../../contexts/theme/type";
 
 interface SignUpStyleProps {
   scrollContent: StyleProp<ViewStyle>;

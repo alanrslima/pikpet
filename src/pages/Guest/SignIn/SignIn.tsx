@@ -7,11 +7,11 @@ import {
   PPScrollView,
   PPSectionHeader,
   PPView,
-} from "../../components";
-import { PPButton } from "../../components/PPButton/PPButton";
-import { PPText } from "../../components/PPText/PPText";
-import { useStyle, useTheme } from "../../hooks";
-import { GuestStackParamList } from "../../routes/guest.routes";
+} from "../../../components";
+import { PPButton } from "../../../components/PPButton/PPButton";
+import { PPText } from "../../../components/PPText/PPText";
+import { useStyle, useTheme } from "../../../hooks";
+import { GuestStackParamList } from "../../../routes/guest.routes";
 import { SignInStyle } from "./SignIn.style";
 
 type SignInScreenProp = NativeStackNavigationProp<
@@ -28,7 +28,9 @@ export const SignIn: React.FC = () => {
     navigate("SignUp");
   };
 
-  const handleForgetPassword = () => {};
+  const handleForgetPassword = () => {
+    navigate("ForgetPasswordEmail");
+  };
 
   return (
     <PPScreen
@@ -41,7 +43,12 @@ export const SignIn: React.FC = () => {
           title="Seja bem vindo de volta,"
           subTitle="Estamos felizes em te ver novamente, digite seu e-mail e sua senha para acessar o aplicativo =)"
         />
-        <PPInput placeholder="E-mail" />
+        <PPInput
+          placeholder="E-mail"
+          autoCapitalize="none"
+          autoFocus
+          keyboardType="email-address"
+        />
         <PPInput placeholder="Senha" secureTextEntry />
         <PPView style={style.wrapperSignUpButton}>
           <PPButton text="Entrar" />

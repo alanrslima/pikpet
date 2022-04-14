@@ -1,6 +1,6 @@
 export * from "./PPAlert/PPAlert";
 export * from "./PPScreen/PPScreen";
-// export * from './PIcon/PIcon';
+export * from "./PPLoading/PPLoading";
 // export * from './PProgressBar/PProgressBar';
 export * from "./PPInput/PPInput";
 export * from "./PPSectionHeader/PPSectionHeader";

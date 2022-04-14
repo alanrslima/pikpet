@@ -6,13 +6,11 @@ import { PPInputStyle } from "./PPInput.style";
 
 interface PPInputProps extends TextInputProps {}
 export const PPInput: React.FC<PPInputProps> = ({ ...rest }) => {
-  const { theme } = useTheme();
   const style = useStyle(PPInputStyle);
 
   return (
     <View style={style.container}>
       <TextInput {...rest} style={style.input} />
-      <View style={style.wrapperLabel}></View>
     </View>
   );
 };

@@ -1,18 +1,18 @@
 import React from "react";
-import { PPImage, PPSectionHeader, PPView } from "../../components";
-import BulldogImg from "../../assets/images/bulldog.png";
-import { useStyle } from "../../hooks";
-import { HomeStyle } from "./Home.style";
-import { PPButton } from "../../components/PPButton/PPButton";
+import { PPImage, PPSectionHeader, PPView } from "../../../components";
+import BulldogImg from "../../../assets/images/bulldog.png";
+import { useStyle } from "../../../hooks";
+import { MainStyle } from "./Main.style";
+import { PPButton } from "../../../components/PPButton/PPButton";
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { GuestStackParamList } from "../../routes/guest.routes";
+import { GuestStackParamList } from "../../../routes/guest.routes";
 
-type HomeScreenProp = NativeStackNavigationProp<GuestStackParamList, "Home">;
+type MainScreenProp = NativeStackNavigationProp<GuestStackParamList, "Main">;
 
-export const Home: React.FC = () => {
-  const style = useStyle(HomeStyle);
-  const { navigate } = useNavigation<HomeScreenProp>();
+export const Main: React.FC = () => {
+  const style = useStyle(MainStyle);
+  const { navigate } = useNavigation<MainScreenProp>();
 
   const handleStart = () => {
     navigate("SignUp");

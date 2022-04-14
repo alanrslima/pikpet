@@ -7,11 +7,11 @@ import {
   PPScrollView,
   PPSectionHeader,
   PPView,
-} from "../../components";
-import { PPButton } from "../../components/PPButton/PPButton";
-import { PPText } from "../../components/PPText/PPText";
-import { useStyle, useTheme } from "../../hooks";
-import { GuestStackParamList } from "../../routes/guest.routes";
+} from "../../../components";
+import { PPButton } from "../../../components/PPButton/PPButton";
+import { PPText } from "../../../components/PPText/PPText";
+import { useStyle, useTheme } from "../../../hooks";
+import { GuestStackParamList } from "../../../routes/guest.routes";
 import { SignUpStyle } from "./SignUp.style";
 
 type SignUpScreenProp = NativeStackNavigationProp<
@@ -53,7 +53,11 @@ export const SignUp: React.FC = () => {
           title="Criar uma conta"
           subTitle="Crie uma conta, isso levará menos de 1 minuto, basta informar seu e-mail e uma senha segura"
         />
-        <PPInput placeholder="E-mail" />
+        <PPInput
+          placeholder="E-mail"
+          autoCapitalize="none"
+          keyboardType="email-address"
+        />
         <PPInput placeholder="Senha" secureTextEntry />
         <PPView style={style.wrapperSignUpButton}>
           <PPButton text="Cadastrar" />
