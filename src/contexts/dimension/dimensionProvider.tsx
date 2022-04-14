@@ -38,7 +38,8 @@ export const DimensionProvider: React.FC = ({ children }) => {
   return (
     <DimensionContext.Provider value={dimension!}>
       <View onLayout={onLayout} style={style.wrapper}>
-        {dimension && (children as JSX.Element)}
+        {children as JSX.Element}
+        {/* {dimension && (children as JSX.Element)} */}
       </View>
     </DimensionContext.Provider>
   );

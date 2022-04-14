@@ -1,20 +1,35 @@
-// import { render, waitFor } from "@testing-library/react-native";
-// import { PPButton } from "../../src/components/PPButton/PPButton";
+import { fireEvent, render } from "@testing-library/react-native";
+import { PPButton } from "../../src/components";
+import { Contexts } from "../../src/contexts";
 
-// import App from "./App";
+const mockButtonPress = jest.fn();
 
-
-describe('PPButton Component', () => {
-  it('should render a send button', async () => {
-    // const { getByText, queryByText, rerender, unmount } = render(<PPButton text="Send"  />)
-
-    // expect(getByText('Send')).toBeNaN
-    // expect(getByText('Rodz')).toBeInTheDocument()
-    // expect(getByText('Mayk')).toBeInTheDocument()
-
-    // unmount()
-    // rerender(<List initialItems={['Julia']} />)
-
-    // expect(getByText('Julia')).toBeInTheDocument()
-    // expect(queryByText('Mayk')).not.toBeInTheDocument()
+describe("PPButton Component", () => {
+  it("should render a dynamic button text", async () => {
+    const firstRender = render(
+      <Contexts>
+        <PPButton text="Enviar" />
+      </Contexts>
+    );
+    expect(firstRender.getByText("Enviar")).toBeTruthy();
+    firstRender.unmount();
+    const secondRender = render(
+      <Contexts>
+        <PPButton text="Próximo" />
+      </Contexts>
+    );
+    expect(secondRender.getByText("Próximo")).toBeTruthy();
+    expect(secondRender.queryByText("Enviar")).not.toBeTruthy();
   });
+
+  it("should be able to disabled", async () => {
+    const { getByTestId } = render(
+      <Contexts>
+        <PPButton disabled onPress={mockButtonPress} />
+      </Contexts>
+    );
+    const button = getByTestId("ppbutton");
+    fireEvent.press(button);
+    expect(mockButtonPress).not.toHaveBeenCalled();
+  });
+});

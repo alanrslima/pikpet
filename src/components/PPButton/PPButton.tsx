@@ -22,6 +22,7 @@ export const PPButton: React.FC<PPButtonProps> = ({
 
   return (
     <TouchableOpacity
+      testID="ppbutton"
       disabled={disabled}
       onPress={onPress}
       style={[
