@@ -1,6 +1,7 @@
 import React from "react";
-import { ActivityIndicator, TouchableOpacity } from "react-native";
+import { ActivityIndicator, TouchableOpacity, View } from "react-native";
 import { useStyle } from "../../hooks";
+import { PPIcon, PPIconProps } from "../PPIcon/PPIcon";
 import { PPText } from "../PPText/PPText";
 import { PPButtonStyle } from "./PPButton.style";
 
@@ -11,6 +12,8 @@ export interface PPButtonProps {
   bgColor?: string;
   tintColor?: string;
   loading?: boolean;
+  rightIcon?: PPIconProps;
+  leftIcon?: PPIconProps;
 }
 export const PPButton: React.FC<PPButtonProps> = ({
   onPress,
@@ -19,6 +22,8 @@ export const PPButton: React.FC<PPButtonProps> = ({
   bgColor,
   tintColor,
   loading,
+  rightIcon,
+  leftIcon,
 }) => {
   const style = useStyle(PPButtonStyle);
 
@@ -33,6 +38,11 @@ export const PPButton: React.FC<PPButtonProps> = ({
         disabled && style.disabled,
       ]}
     >
+      <View style={style.wrapperIcon}>
+        <View>{leftIcon && <PPIcon {...leftIcon} />}</View>
+        <View>{rightIcon && <PPIcon {...rightIcon} />}</View>
+      </View>
+
       {loading ? (
         <ActivityIndicator color={tintColor || "white"} />
       ) : (

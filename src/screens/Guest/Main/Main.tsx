@@ -1,7 +1,7 @@
 import React from "react";
 import { PPImage, PPSectionHeader, PPView } from "../../../components";
 import BulldogImg from "../../../assets/images/bulldog.png";
-import { useStyle } from "../../../hooks";
+import { useStyle, useTheme } from "../../../hooks";
 import { MainStyle } from "./Main.style";
 import { PPButton } from "../../../components/PPButton/PPButton";
 import { useNavigation } from "@react-navigation/native";
@@ -13,6 +13,7 @@ type MainScreenProp = NativeStackNavigationProp<GuestStackParamList, "Main">;
 export const Main: React.FC = () => {
   const style = useStyle(MainStyle);
   const { navigate } = useNavigation<MainScreenProp>();
+  const { theme } = useTheme();
 
   const handleStart = () => {
     navigate("SignUp");
@@ -30,7 +31,11 @@ export const Main: React.FC = () => {
             distância"
         />
 
-        <PPButton onPress={handleStart} text="Começar agora" />
+        <PPButton
+          rightIcon={{ name: "arrow-right", size: 20, color: "#FFF" }}
+          onPress={handleStart}
+          text="Começar agora"
+        />
       </PPView>
     </PPView>
   );

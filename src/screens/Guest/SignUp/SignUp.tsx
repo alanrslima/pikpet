@@ -2,6 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import {
+  PPIconProps,
   PPInput,
   PPScreen,
   PPScrollView,
@@ -29,14 +30,21 @@ export const SignUp: React.FC = () => {
       id: "google",
       label: "Continue com Google",
       color: theme.colors.secundary,
+      icon: { name: "google", type: "font_awesome", size: 20, color: "#fff" },
     },
     {
       id: "facebook",
       label: "Continue com Facebook",
       color: theme.colors.primary,
+      icon: { name: "facebook", type: "font_awesome", size: 20, color: "#fff" },
     },
-    { id: "apple", label: "Continue com Apple", color: "black" },
-  ];
+    {
+      id: "apple",
+      label: "Continue com Apple",
+      color: "black",
+      icon: { name: "apple", type: "font_awesome", size: 20, color: "#fff" },
+    },
+  ] as { id: string; label: string; color: string; icon: PPIconProps }[];
 
   const handleSignIn = () => {
     navigate("SignIn");
@@ -55,11 +63,11 @@ export const SignUp: React.FC = () => {
         />
         <PPInput
           placeholder="E-mail"
-          iconName="mail"
+          icon={{ name: "mail" }}
           autoCapitalize="none"
           keyboardType="email-address"
         />
-        <PPInput placeholder="Senha" iconName="lock" secureTextEntry />
+        <PPInput placeholder="Senha" icon={{ name: "lock" }} secureTextEntry />
         <PPView style={style.wrapperSignUpButton}>
           <PPButton text="Cadastrar" />
         </PPView>
@@ -72,7 +80,11 @@ export const SignUp: React.FC = () => {
 
         {loginSocial.map((item) => (
           <PPView style={style.wrapperSocialButton} key={item.id}>
-            <PPButton bgColor={item.color} text={item.label} />
+            <PPButton
+              leftIcon={{ ...item.icon }}
+              bgColor={item.color}
+              text={item.label}
+            />
           </PPView>
         ))}
 

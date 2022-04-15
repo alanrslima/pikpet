@@ -4,6 +4,7 @@ import { ThemeProps } from "../../contexts/theme/type";
 interface PPButtonStyleProps {
   container?: StyleProp<ViewStyle>;
   disabled?: StyleProp<ViewStyle>;
+  wrapperIcon?: StyleProp<ViewStyle>;
 }
 
 export const PPButtonStyle = (theme: ThemeProps): PPButtonStyleProps => {
@@ -12,7 +13,7 @@ export const PPButtonStyle = (theme: ThemeProps): PPButtonStyleProps => {
       backgroundColor: theme.colors.primary,
       justifyContent: "center",
       alignItems: "center",
-      padding: theme.spaces.space_4,
+      paddingVertical: theme.spaces.space_3,
       borderRadius: 10,
       shadowColor: "rgba(0,0,0,1)",
       shadowOffset: { width: 2, height: 2 },
@@ -20,10 +21,17 @@ export const PPButtonStyle = (theme: ThemeProps): PPButtonStyleProps => {
       shadowRadius: 5,
       elevation: 5,
       flexDirection: "row",
-      minHeight: 55,
+      minHeight: 50,
     },
     disabled: {
       backgroundColor: theme.colors.on_background_disable,
+    },
+    wrapperIcon: {
+      flexDirection: "row",
+      ...StyleSheet.absoluteFillObject,
+      justifyContent: "space-between",
+      alignItems: "center",
+      paddingHorizontal: theme.spaces.space_4,
     },
   });
 };

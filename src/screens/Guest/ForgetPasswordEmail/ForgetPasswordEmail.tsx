@@ -29,7 +29,9 @@ export const ForgetPasswordEmail: React.FC = () => {
   return (
     <PPScreen
       header={{
-        leftButtons: [{ icon: { name: "arrow-left" }, onPress: goBack }],
+        leftButtons: [
+          { icon: { name: "arrow-left", type: "feather" }, onPress: goBack },
+        ],
       }}
     >
       <PPScrollView contentContainerStyle={style.scrollContent}>
@@ -41,7 +43,7 @@ export const ForgetPasswordEmail: React.FC = () => {
           placeholder="E-mail"
           autoCapitalize="none"
           autoFocus
-          iconName="mail"
+          icon={{ name: "mail", type: "feather" }}
           keyboardType="email-address"
         />
 

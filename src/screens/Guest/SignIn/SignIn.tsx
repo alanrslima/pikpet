@@ -53,10 +53,10 @@ export const SignIn: React.FC = () => {
           placeholder="E-mail"
           autoCapitalize="none"
           autoFocus
-          iconName="mail"
+          icon={{ name: "mail" }}
           keyboardType="email-address"
         />
-        <PPInput placeholder="Senha" iconName="lock" secureTextEntry />
+        <PPInput placeholder="Senha" icon={{ name: "lock" }} secureTextEntry />
         <PPView style={style.wrapperSignUpButton}>
           <PPButton onPress={handleSignIn} text="Entrar" />
         </PPView>

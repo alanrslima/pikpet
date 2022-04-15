@@ -1,19 +1,19 @@
 import React from "react";
 import { TextInput, TextInputProps, View } from "react-native";
 import { useStyle, useTheme } from "../../hooks";
-import { PPIcon, PPIconNameType } from "../PPIcon/PPIcon";
+import { PPIcon, PPIconProps } from "../PPIcon/PPIcon";
 
 import { PPInputStyle } from "./PPInput.style";
 
 interface PPInputProps extends TextInputProps {
   bgColor?: string;
   borderColor?: string;
-  iconName?: PPIconNameType;
+  icon?: PPIconProps;
 }
 export const PPInput: React.FC<PPInputProps> = ({
   bgColor,
   borderColor,
-  iconName,
+  icon,
   ...rest
 }) => {
   const style = useStyle(PPInputStyle);
@@ -27,12 +27,12 @@ export const PPInput: React.FC<PPInputProps> = ({
         borderColor ? { borderColor: borderColor } : {},
       ]}
     >
-      {iconName && iconName.length > 0 && (
+      {icon && (
         <View style={style.wrapperIcon}>
           <PPIcon
-            color={theme.colors.on_input_placeholder}
-            name={iconName}
+            {...icon}
             size={18}
+            color={theme.colors.on_input_placeholder}
           />
         </View>
       )}

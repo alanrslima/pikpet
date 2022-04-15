@@ -5,6 +5,7 @@ import { SignIn } from "../screens/Guest/SignIn/SignIn";
 import { Main } from "../screens/Guest/Main/Main";
 import { ForgetPasswordEmail } from "../screens/Guest/ForgetPasswordEmail/ForgetPasswordEmail";
 import { ForgetPasswordCode } from "../screens/Guest/ForgetPasswordCode/ForgetPasswordCode";
+import { ForgetPasswordReset } from "../screens/Guest/ForgetPasswordReset/ForgetPasswordReset";
 
 export type GuestStackParamList = {
   Main: undefined;
@@ -12,6 +13,7 @@ export type GuestStackParamList = {
   SignIn: undefined;
   ForgetPasswordEmail: undefined;
   ForgetPasswordCode: undefined;
+  ForgetPasswordReset: undefined;
 };
 
 const RootStack = createNativeStackNavigator<GuestStackParamList>();
@@ -28,6 +30,10 @@ export function GestRoutes() {
       <RootStack.Screen
         name="ForgetPasswordCode"
         component={ForgetPasswordCode}
+      />
+      <RootStack.Screen
+        name="ForgetPasswordReset"
+        component={ForgetPasswordReset}
       />
     </RootStack.Navigator>
   );
