@@ -5,6 +5,15 @@ import { useStyle, useTheme } from "../../hooks";
 
 import { TextProps } from "react-native";
 
+export type TextSizeTypes =
+  | "heading_1"
+  | "heading_2"
+  | "heading_3"
+  | "heading_4"
+  | "body"
+  | "small"
+  | "caption";
+
 export interface IPPText extends TextProps {
   /**
    * Weight of the font > light = 300; regular = 400; medium = 500; semiBold = 600; bold = 700; black = 800
@@ -14,14 +23,7 @@ export interface IPPText extends TextProps {
   /**
    * Size of the font > heading_1 = 30px; heading_2 = 26px; heading_3 = 22px; heading_4 = 16px; body = 14px; small = 12px; caption = 10px
    */
-  size?:
-    | "heading_1"
-    | "heading_2"
-    | "heading_3"
-    | "heading_4"
-    | "body"
-    | "small"
-    | "caption";
+  size?: TextSizeTypes;
 
   /**
    * Color of the text

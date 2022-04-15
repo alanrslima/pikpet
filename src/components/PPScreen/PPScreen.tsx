@@ -20,7 +20,11 @@ export const PPScreen: React.FC<IPScreen> = ({ header, loading, children }) => {
       {loading ? (
         <PPLoading />
       ) : (
-        <Animatable.View animation="fadeInUp" iterationCount={1}>
+        <Animatable.View
+          style={style.container}
+          animation="fadeInUp"
+          iterationCount={1}
+        >
           {children}
         </Animatable.View>
       )}

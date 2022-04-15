@@ -11,6 +11,7 @@ import {
 import { PPButton } from "../../../components/PPButton/PPButton";
 import { PPText } from "../../../components/PPText/PPText";
 import { useStyle, useTheme } from "../../../hooks";
+import { useAuth } from "../../../hooks/useAuth";
 import { GuestStackParamList } from "../../../routes/guest.routes";
 import { SignInStyle } from "./SignIn.style";
 
@@ -22,6 +23,7 @@ type SignInScreenProp = NativeStackNavigationProp<
 export const SignIn: React.FC = () => {
   const { goBack, navigate } = useNavigation<SignInScreenProp>();
   const { theme } = useTheme();
+  const { signIn } = useAuth();
   const style = useStyle(SignInStyle);
 
   const handleSignUp = () => {
@@ -30,6 +32,10 @@ export const SignIn: React.FC = () => {
 
   const handleForgetPassword = () => {
     navigate("ForgetPasswordEmail");
+  };
+
+  const handleSignIn = () => {
+    signIn();
   };
 
   return (
@@ -47,11 +53,12 @@ export const SignIn: React.FC = () => {
           placeholder="E-mail"
           autoCapitalize="none"
           autoFocus
+          iconName="mail"
           keyboardType="email-address"
         />
-        <PPInput placeholder="Senha" secureTextEntry />
+        <PPInput placeholder="Senha" iconName="lock" secureTextEntry />
         <PPView style={style.wrapperSignUpButton}>
-          <PPButton text="Entrar" />
+          <PPButton onPress={handleSignIn} text="Entrar" />
         </PPView>
 
         <PPView style={style.wrapperLabel}>
@@ -66,7 +73,7 @@ export const SignIn: React.FC = () => {
 
         <PPView style={style.wrapperOr}>
           <PPView style={style.line} />
-          <PPText color={theme.colors.on_background_disable}>ou</PPText>
+          <PPText color={theme.colors.on_background_secundary}>ou</PPText>
           <PPView style={style.line} />
         </PPView>
 

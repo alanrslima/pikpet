@@ -55,17 +55,18 @@ export const SignUp: React.FC = () => {
         />
         <PPInput
           placeholder="E-mail"
+          iconName="mail"
           autoCapitalize="none"
           keyboardType="email-address"
         />
-        <PPInput placeholder="Senha" secureTextEntry />
+        <PPInput placeholder="Senha" iconName="lock" secureTextEntry />
         <PPView style={style.wrapperSignUpButton}>
           <PPButton text="Cadastrar" />
         </PPView>
 
         <PPView style={style.wrapperOr}>
           <PPView style={style.line} />
-          <PPText color={theme.colors.on_background_disable}>ou</PPText>
+          <PPText color={theme.colors.on_background_secundary}>ou</PPText>
           <PPView style={style.line} />
         </PPView>
 

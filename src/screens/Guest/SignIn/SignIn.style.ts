@@ -26,7 +26,7 @@ export const SignInStyle = (theme: ThemeProps): SignInStyleProps => {
     line: {
       flex: 1,
       marginHorizontal: theme.spaces.space_3,
-      backgroundColor: theme.colors.on_background_disable,
+      backgroundColor: theme.colors.on_background_secundary,
       height: 1,
     },
     wrapperLabel: {

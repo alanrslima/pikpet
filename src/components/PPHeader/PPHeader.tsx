@@ -23,16 +23,18 @@ export interface PPHeaderProps {
   leftButtons?: PPHeaderButtonProps[];
   rightButtons?: PPHeaderButtonProps[];
   title?: string;
+  floating?: boolean;
 }
 export const PPHeader: React.FC<PPHeaderProps> = ({
   leftButtons,
   rightButtons,
   title,
+  floating,
 }) => {
   const style = useStyle(PPHeaderStyle);
 
   return (
-    <View style={style.container}>
+    <View style={[style.container, floating && style.floating]}>
       <View style={style.wrapperTitle}>
         <PPText color="white">{title}</PPText>
       </View>

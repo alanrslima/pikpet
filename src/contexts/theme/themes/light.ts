@@ -11,10 +11,10 @@ const colors: ThemeColorProps = {
 
   background: "#FFF",
   on_background_primary: "rgba(0,0,0,1)",
-  on_background_secundary: "rgba(0,0,0,0.5)",
-  on_background_disable: "rgba(0,0,0,0.2)",
+  on_background_secundary: "rgba(0,0,0,0.4)",
+  on_background_disable: "rgba(0,0,0,0.05)",
 
-  surface: "#F5F5F5",
+  surface: "#FFFFFF",
   on_surface_primary: "rgba(0,0,0,1)",
   on_surface_secundary: "rgba(0,0,0,0.5)",
   on_surface_disable: "rgba(0,0,0,0.1)",

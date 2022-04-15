@@ -20,6 +20,7 @@ export const PPButtonStyle = (theme: ThemeProps): PPButtonStyleProps => {
       shadowRadius: 5,
       elevation: 5,
       flexDirection: "row",
+      minHeight: 55,
     },
     disabled: {
       backgroundColor: theme.colors.on_background_disable,

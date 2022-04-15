@@ -29,7 +29,7 @@ export const SignUpStyle = (theme: ThemeProps): SignUpStyleProps => {
     line: {
       flex: 1,
       marginHorizontal: theme.spaces.space_3,
-      backgroundColor: theme.colors.on_background_disable,
+      backgroundColor: theme.colors.on_background_secundary,
       height: 1,
     },
     wrapperFooterText: {

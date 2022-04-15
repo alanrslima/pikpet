@@ -1,20 +1,18 @@
-import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import * as React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Home } from "../screens/Logged/Home/Home";
+import { StoreDetail } from "../screens/Logged/StoreDetail/StoreDetail";
 
+export type LoggedStackParamList = {
+  Home: undefined;
+  StoreDetail: undefined;
+};
 const RootStack = createNativeStackNavigator();
-export function App() {
-  // const {user} = useSelector((state: StoreStateProps) => state.Authentication);
-
+export function LoggedRoutes() {
   return (
-    <NavigationContainer>
-      <RootStack.Navigator>
-        <RootStack.Screen
-          options={{headerShown: false}}
-          name="App"
-          component={Dashboard}
-        />
-      </RootStack.Navigator>
-    </NavigationContainer>
+    <RootStack.Navigator screenOptions={{ headerShown: false }}>
+      <RootStack.Screen name="Home" component={Home} />
+      <RootStack.Screen name="StoreDetail" component={StoreDetail} />
+    </RootStack.Navigator>
   );
 }

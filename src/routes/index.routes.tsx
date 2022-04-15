@@ -1,34 +1,22 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-// import {useSelector} from 'react-redux';
-// import {navigationRef} from '~/config/RootNavigation';
-
-// import Login from './login.routes';
 import { GestRoutes } from "./guest.routes";
-// import {StoreStateProps} from '~/store/createStore';
+import { useAuth } from "../hooks/useAuth";
+import { LoggedRoutes } from "./logged.routes";
 
 const Stack = createNativeStackNavigator();
 export const Routes: React.FC = () => {
-  // const {user} = useSelector((state: StoreStateProps) => state.Authentication);
+  const { user } = useAuth();
 
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="GestRoutes" component={GestRoutes} />
-        {/* {user ? (
-          <RootStack.Screen
-            options={{headerShown: false}}
-            name="App"
-            component={Dashboard}
-          />
+        {user ? (
+          <Stack.Screen name="LoggedRoutes" component={LoggedRoutes} />
         ) : (
-          <RootStack.Screen
-            options={{headerShown: false}}
-            name="Login"
-            component={Login}
-          />
-        )} */}
+          <Stack.Screen name="GestRoutes" component={GestRoutes} />
+        )}
       </Stack.Navigator>
     </NavigationContainer>
   );

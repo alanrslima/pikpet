@@ -1,4 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import {
   PPInput,
@@ -9,11 +10,21 @@ import {
 } from "../../../components";
 import { PPButton } from "../../../components/PPButton/PPButton";
 import { useStyle } from "../../../hooks";
+import { GuestStackParamList } from "../../../routes/guest.routes";
 import { ForgetPasswordEmailStyle } from "./ForgetPasswordEmail.style";
 
+type ForgetPasswordEmailScreenProp = NativeStackNavigationProp<
+  GuestStackParamList,
+  "ForgetPasswordEmail"
+>;
+
 export const ForgetPasswordEmail: React.FC = () => {
-  const { goBack } = useNavigation();
+  const { goBack, navigate } = useNavigation<ForgetPasswordEmailScreenProp>();
   const style = useStyle(ForgetPasswordEmailStyle);
+
+  const onPressNext = () => {
+    navigate("ForgetPasswordCode");
+  };
 
   return (
     <PPScreen
@@ -30,11 +41,12 @@ export const ForgetPasswordEmail: React.FC = () => {
           placeholder="E-mail"
           autoCapitalize="none"
           autoFocus
+          iconName="mail"
           keyboardType="email-address"
         />
 
         <PPView style={style.wrapperSendButton}>
-          <PPButton text="Entrar" />
+          <PPButton text="Próximo" onPress={onPressNext} />
         </PPView>
       </PPScrollView>
     </PPScreen>

@@ -1,5 +1,5 @@
 import React from "react";
-import { TouchableOpacity } from "react-native";
+import { ActivityIndicator, TouchableOpacity } from "react-native";
 import { useStyle } from "../../hooks";
 import { PPText } from "../PPText/PPText";
 import { PPButtonStyle } from "./PPButton.style";
@@ -10,6 +10,7 @@ export interface PPButtonProps {
   disabled?: boolean;
   bgColor?: string;
   tintColor?: string;
+  loading?: boolean;
 }
 export const PPButton: React.FC<PPButtonProps> = ({
   onPress,
@@ -17,6 +18,7 @@ export const PPButton: React.FC<PPButtonProps> = ({
   disabled,
   bgColor,
   tintColor,
+  loading,
 }) => {
   const style = useStyle(PPButtonStyle);
 
@@ -31,9 +33,13 @@ export const PPButton: React.FC<PPButtonProps> = ({
         disabled && style.disabled,
       ]}
     >
-      <PPText color={tintColor || "white"} weight="bold">
-        {text}
-      </PPText>
+      {loading ? (
+        <ActivityIndicator color={tintColor || "white"} />
+      ) : (
+        <PPText color={tintColor || "white"} weight="bold">
+          {text}
+        </PPText>
+      )}
     </TouchableOpacity>
   );
 };

@@ -1,28 +1,25 @@
-import { ImageStyle, StyleProp, StyleSheet, ViewStyle } from "react-native";
+import { StyleProp, StyleSheet, ViewStyle } from "react-native";
 import { ThemeProps } from "../../../contexts/theme/type";
 
 interface HomeStyleProps {
   container: StyleProp<ViewStyle>;
-  wrapperBanner: StyleProp<ViewStyle>;
-  banner: StyleProp<ImageStyle>;
-  footer: StyleProp<ViewStyle>;
+  wrapperItem: StyleProp<ViewStyle>;
+  row: StyleProp<ViewStyle>;
 }
 
 export const HomeStyle = (theme: ThemeProps): HomeStyleProps => {
   return StyleSheet.create({
     container: {
       flex: 1,
+      backgroundColor: theme.colors.background,
     },
-    wrapperBanner: {
-      flex: 1,
+    wrapperItem: {
+      paddingTop: theme.spaces.space_2,
+      paddingHorizontal: theme.spaces.space_5,
+      paddingBottom: theme.spaces.space_4,
     },
-    banner: {
-      width: "100%",
-      height: "100%",
-      resizeMode: "cover",
-    },
-    footer: {
-      padding: theme.spaces.space_5,
+    row: {
+      flexDirection: "row",
     },
   });
 };

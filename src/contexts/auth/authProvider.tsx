@@ -5,12 +5,16 @@ import { UserProps } from "../../types/user";
 export const AuthProvider: React.FC = ({ children }) => {
   const [user, setUser] = useState<UserProps>();
 
-  const signIn = () => {};
+  const signIn = () => {
+    setUser({ id: 123, name: "João" });
+  };
 
-  const signOut = () => {};
+  const signOut = () => {
+    setUser(undefined);
+  };
 
   return (
-    <AuthContext.Provider value={{ user, signIn }}>
+    <AuthContext.Provider value={{ user, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );

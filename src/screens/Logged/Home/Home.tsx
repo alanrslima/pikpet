@@ -1,46 +1,83 @@
-// import React from "react";
-// import { PPImage, PPSectionHeader, PPView } from "../../components";
-// import BulldogImg from "../../assets/images/bulldog.png";
-// import { useStyle } from "../../hooks";
-// import { HomeStyle } from "./Home.style";
-// import { PPButton } from "../../components/PPButton/PPButton";
-// import { useNavigation } from "@react-navigation/native";
-// import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-// import { GuestStackParamList } from "../../routes/guest.routes";
-
-// type HomeScreenProp = NativeStackNavigationProp<GuestStackParamList, "Home">;
-
-// export const Home: React.FC = () => {
-//   const style = useStyle(HomeStyle);
-//   const { navigate } = useNavigation<HomeScreenProp>();
-
-//   const handleStart = () => {
-//     navigate("SignUp");
-//   };
-
-//   return (
-//     <PPView style={style.container}>
-//       <PPView style={style.wrapperBanner}>
-//         <PPImage resizeMode="cover" style={style.banner} source={BulldogImg} />
-//       </PPView>
-//       <PPView style={style.footer}>
-//         <PPSectionHeader
-//           title="Encontre os produtos e serviços perfeitos para seu Pet"
-//           subTitle="Os melhores profissionais e produtos estão a poucos cliques de
-//             distância"
-//         />
-
-//         <PPButton onPress={handleStart} text="Começar agora" />
-//       </PPView>
-//     </PPView>
-//   );
-// };
-
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
-import { View } from "react-native";
+import {
+  PPSafeAreaView,
+  PPTouchableOpacity,
+  PPText,
+  PPView,
+  PPIcon,
+  PPSectionHeader,
+  PPCarousel,
+  PPScrollView,
+  PPCardItem,
+  PPInput,
+} from "../../../components";
+import { useStyle, useTheme } from "../../../hooks";
+import { LoggedStackParamList } from "../../../routes/logged.routes";
+import { HomeStyle } from "./Home.style";
 
-// import { Container } from './styles';
+type HomeScreenProp = NativeStackNavigationProp<LoggedStackParamList, "Home">;
 
 export const Home: React.FC = () => {
-  return <View />;
+  const style = useStyle(HomeStyle);
+  const { theme } = useTheme();
+  const { navigate } = useNavigation<HomeScreenProp>();
+
+  const onPressStore = () => {
+    navigate("StoreDetail");
+  };
+
+  return (
+    <PPSafeAreaView style={style.container}>
+      <PPScrollView>
+        {/* Location Picker */}
+        <PPTouchableOpacity style={style.wrapperItem}>
+          <PPText color={theme.colors.on_background_secundary}>
+            Localização atual
+          </PPText>
+          <PPView style={style.row}>
+            <PPText
+              size="heading_4"
+              color={theme.colors.on_background_primary}
+              weight="bold"
+            >
+              Goiânia, Goias
+            </PPText>
+            <PPIcon name="chevron-down" size={20} />
+          </PPView>
+        </PPTouchableOpacity>
+
+        {/* Search */}
+        <PPView style={style.wrapperItem}>
+          <PPInput
+            iconName="search"
+            placeholder="Pesquisar"
+            borderColor="transparent"
+            bgColor={theme.colors.on_background_disable}
+          />
+        </PPView>
+
+        {/* Pets carrousel */}
+        <PPView style={style.wrapperItem}>
+          <PPCarousel />
+        </PPView>
+
+        {/* Scroll horizontal */}
+        <PPView style={style.wrapperItem}>
+          <PPSectionHeader size="medium" title="Perto de você" />
+        </PPView>
+
+        {/* Melhores avalidados */}
+        <PPView style={style.wrapperItem}>
+          <PPSectionHeader size="medium" title="Melhores avaliados" />
+        </PPView>
+
+        <PPCardItem onPress={onPressStore} />
+        <PPCardItem />
+        <PPCardItem />
+        <PPCardItem />
+      </PPScrollView>
+    </PPSafeAreaView>
+  );
 };

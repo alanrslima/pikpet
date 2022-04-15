@@ -4,6 +4,7 @@ import {} from "react";
 
 interface PPHeaderStyleProps {
   container?: StyleProp<ViewStyle>;
+  floating?: StyleProp<ViewStyle>;
   wrapperTitle?: StyleProp<ViewStyle>;
   containerButton?: StyleProp<ViewStyle>;
   wrapperButtons?: StyleProp<ViewStyle>;
@@ -34,6 +35,13 @@ export const PPHeaderStyle = (theme: ThemeProps): PPHeaderStyleProps => {
     },
     wrapperButtons: {
       flexDirection: "row",
+    },
+    floating: {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 100,
     },
   });
 };
