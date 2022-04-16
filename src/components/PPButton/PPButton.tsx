@@ -39,12 +39,19 @@ export const PPButton: React.FC<PPButtonProps> = ({
       ]}
     >
       <View style={style.wrapperIcon}>
-        <View>{leftIcon && <PPIcon {...leftIcon} />}</View>
-        <View>{rightIcon && <PPIcon {...rightIcon} />}</View>
+        <View>
+          {leftIcon && <PPIcon {...leftIcon} testID="ppbutton-lefticon" />}
+        </View>
+        <View>
+          {rightIcon && <PPIcon {...rightIcon} testID="ppbutton-righticon" />}
+        </View>
       </View>
 
       {loading ? (
-        <ActivityIndicator color={tintColor || "white"} />
+        <ActivityIndicator
+          testID="ppbutton-loading"
+          color={tintColor || "white"}
+        />
       ) : (
         <PPText color={tintColor || "white"} weight="bold">
           {text}

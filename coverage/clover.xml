@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1649969135331" clover="3.2.0">
-  <project timestamp="1649969135332" name="All files">
-    <metrics statements="161" coveredstatements="103" conditionals="55" coveredconditionals="18" methods="45" coveredmethods="21" elements="261" coveredelements="142" complexity="0" loc="161" ncloc="161" packages="17" files="37" classes="37"/>
+<coverage generated="1650066290198" clover="3.2.0">
+  <project timestamp="1650066290198" name="All files">
+    <metrics statements="182" coveredstatements="118" conditionals="79" coveredconditionals="35" methods="51" coveredmethods="25" elements="312" coveredelements="178" complexity="0" loc="182" ncloc="182" packages="20" files="42" classes="42"/>
+    <package name="assets.images">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="bulldog.png" path="/Users/alanlima/Documents/projetoPet/mobile/src/assets/images/bulldog.png">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+      </file>
+    </package>
     <package name="components">
       <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="index.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/index.ts">
@@ -13,77 +20,113 @@
       <file name="PPAlert.style.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPAlert/PPAlert.style.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
       </file>
       <file name="PPAlert.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPAlert/PPAlert.tsx">
         <metrics statements="12" coveredstatements="10" conditionals="6" coveredconditionals="2" methods="4" coveredmethods="2"/>
         <line num="15" count="2" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
-        <line num="22" count="6" type="stmt"/>
-        <line num="23" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
+        <line num="16" count="12" type="stmt"/>
+        <line num="18" count="12" type="stmt"/>
+        <line num="20" count="12" type="stmt"/>
+        <line num="22" count="12" type="stmt"/>
+        <line num="23" count="12" type="stmt"/>
+        <line num="25" count="12" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="42" count="6" type="stmt"/>
-        <line num="43" count="6" type="stmt"/>
-        <line num="57" count="6" type="stmt"/>
+        <line num="42" count="12" type="stmt"/>
+        <line num="43" count="12" type="stmt"/>
+        <line num="57" count="12" type="stmt"/>
       </file>
     </package>
     <package name="components.PPButton">
-      <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
+      <metrics statements="5" coveredstatements="5" conditionals="14" coveredconditionals="13" methods="2" coveredmethods="2"/>
       <file name="PPButton.style.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPButton/PPButton.style.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
       </file>
       <file name="PPButton.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPButton/PPButton.tsx">
-        <metrics statements="3" coveredstatements="3" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="21" count="6" type="stmt"/>
-        <line num="23" count="6" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="14" coveredconditionals="13" methods="1" coveredmethods="1"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="30" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.PPCardItem">
+      <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="PPCardItem.style.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPCardItem/PPCardItem.style.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="PPCardItem.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPCardItem/PPCardItem.tsx">
+        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.PPCarousel">
+      <metrics statements="7" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="PPCarousel.style.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPCarousel/PPCarousel.style.ts">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+      </file>
+      <file name="PPCarousel.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPCarousel/PPCarousel.tsx">
+        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
       </file>
     </package>
     <package name="components.PPHeader">
-      <metrics statements="10" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <metrics statements="10" coveredstatements="3" conditionals="6" coveredconditionals="0" methods="5" coveredmethods="0"/>
       <file name="PPHeader.style.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPHeader/PPHeader.style.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
       </file>
       <file name="PPHeader.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPHeader/PPHeader.tsx">
-        <metrics statements="8" coveredstatements="2" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="8" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="12" count="2" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
       </file>
     </package>
     <package name="components.PPIcon">
-      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="PPIcon.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPIcon/PPIcon.tsx">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
       </file>
     </package>
     <package name="components.PPInput">
-      <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="6" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="PPInput.style.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPInput/PPInput.style.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
       </file>
       <file name="PPInput.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPInput/PPInput.tsx">
-        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
       </file>
     </package>
     <package name="components.PPLoading">
@@ -116,61 +159,61 @@
       </file>
     </package>
     <package name="components.PPSectionHeader">
-      <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="6" coveredstatements="6" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
       <file name="PPSectionHeader.style.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPSectionHeader/PPSectionHeader.style.ts">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
       </file>
       <file name="PPSectionHeader.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPSectionHeader/PPSectionHeader.tsx">
-        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
       </file>
     </package>
     <package name="components.PPText">
-      <metrics statements="26" coveredstatements="15" conditionals="18" coveredconditionals="7" methods="4" coveredmethods="4"/>
+      <metrics statements="26" coveredstatements="16" conditionals="18" coveredconditionals="8" methods="4" coveredmethods="4"/>
       <file name="PPText.style.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPText/PPText.style.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="12" count="2" type="stmt"/>
-        <line num="13" count="18" type="stmt"/>
+        <line num="13" count="37" type="stmt"/>
       </file>
       <file name="PPText.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/components/PPText/PPText.tsx">
-        <metrics statements="24" coveredstatements="13" conditionals="18" coveredconditionals="7" methods="3" coveredmethods="3"/>
-        <line num="34" count="2" type="stmt"/>
-        <line num="42" count="18" type="stmt"/>
-        <line num="43" count="18" type="stmt"/>
-        <line num="44" count="18" type="stmt"/>
-        <line num="46" count="18" type="stmt"/>
-        <line num="47" count="18" type="cond" truecount="2" falsecount="5"/>
-        <line num="49" count="0" type="stmt"/>
+        <metrics statements="24" coveredstatements="14" conditionals="18" coveredconditionals="8" methods="3" coveredmethods="3"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="44" count="37" type="stmt"/>
+        <line num="45" count="37" type="stmt"/>
+        <line num="46" count="37" type="stmt"/>
+        <line num="48" count="37" type="stmt"/>
+        <line num="49" count="37" type="cond" truecount="2" falsecount="5"/>
         <line num="51" count="0" type="stmt"/>
-        <line num="53" count="12" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="57" count="6" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="55" count="26" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="59" count="11" type="stmt"/>
         <line num="61" count="0" type="stmt"/>
-        <line num="65" count="18" type="stmt"/>
-        <line num="66" count="18" type="cond" truecount="2" falsecount="6"/>
-        <line num="68" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="67" count="37" type="stmt"/>
+        <line num="68" count="37" type="cond" truecount="3" falsecount="5"/>
         <line num="70" count="0" type="stmt"/>
-        <line num="72" count="6" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="76" count="12" type="stmt"/>
-        <line num="78" count="0" type="stmt"/>
+        <line num="72" count="4" type="stmt"/>
+        <line num="74" count="12" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="78" count="21" type="stmt"/>
         <line num="80" count="0" type="stmt"/>
         <line num="82" count="0" type="stmt"/>
-        <line num="86" count="18" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="88" count="37" type="stmt"/>
       </file>
     </package>
     <package name="contexts">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="index.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/contexts/index.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="12" type="stmt"/>
       </file>
     </package>
     <package name="contexts.alert">
@@ -182,27 +225,29 @@
       <file name="alertProvider.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/contexts/alert/alertProvider.tsx">
         <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="6" count="2" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
+        <line num="7" count="12" type="stmt"/>
+        <line num="11" count="12" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="19" count="6" type="stmt"/>
+        <line num="19" count="12" type="stmt"/>
       </file>
     </package>
     <package name="contexts.auth">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
       <file name="authContext.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/contexts/auth/authContext.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
       </file>
       <file name="authProvider.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/contexts/auth/authProvider.tsx">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
+        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="14" type="stmt"/>
+        <line num="8" count="14" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="14" type="stmt"/>
       </file>
     </package>
     <package name="contexts.dimension">
@@ -214,8 +259,8 @@
       <file name="dimensionProvider.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/contexts/dimension/dimensionProvider.tsx">
         <metrics statements="13" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
+        <line num="9" count="12" type="stmt"/>
+        <line num="11" count="12" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="15" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -224,7 +269,7 @@
         <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="32" count="0" type="stmt"/>
         <line num="34" count="0" type="stmt"/>
-        <line num="38" count="6" type="stmt"/>
+        <line num="38" count="12" type="stmt"/>
         <line num="48" count="2" type="stmt"/>
       </file>
       <file name="helper.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/contexts/dimension/helper.ts">
@@ -249,28 +294,28 @@
       <file name="themeProvider.tsx" path="/Users/alanlima/Documents/projetoPet/mobile/src/contexts/theme/themeProvider.tsx">
         <metrics statements="23" coveredstatements="17" conditionals="9" coveredconditionals="4" methods="5" coveredmethods="5"/>
         <line num="8" count="2" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="6" type="cond" truecount="1" falsecount="2"/>
-        <line num="14" count="6" type="stmt"/>
+        <line num="9" count="12" type="stmt"/>
+        <line num="11" count="12" type="stmt"/>
+        <line num="12" count="12" type="cond" truecount="1" falsecount="2"/>
+        <line num="14" count="12" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
-        <line num="22" count="6" type="stmt"/>
-        <line num="24" count="6" type="stmt"/>
-        <line num="27" count="6" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
-        <line num="30" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="22" count="12" type="stmt"/>
+        <line num="24" count="12" type="stmt"/>
+        <line num="27" count="12" type="stmt"/>
+        <line num="29" count="12" type="stmt"/>
+        <line num="30" count="12" type="cond" truecount="1" falsecount="1"/>
         <line num="31" count="0" type="stmt"/>
-        <line num="33" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="33" count="12" type="cond" truecount="1" falsecount="1"/>
         <line num="34" count="0" type="stmt"/>
-        <line num="36" count="6" type="cond" truecount="1" falsecount="1"/>
-        <line num="37" count="6" type="stmt"/>
-        <line num="38" count="6" type="stmt"/>
+        <line num="36" count="12" type="cond" truecount="1" falsecount="1"/>
+        <line num="37" count="12" type="stmt"/>
+        <line num="38" count="12" type="stmt"/>
         <line num="40" count="0" type="stmt"/>
         <line num="41" count="0" type="stmt"/>
-        <line num="45" count="6" type="stmt"/>
-        <line num="46" count="6" type="stmt"/>
-        <line num="49" count="6" type="stmt"/>
+        <line num="45" count="12" type="stmt"/>
+        <line num="46" count="12" type="stmt"/>
+        <line num="49" count="12" type="stmt"/>
       </file>
     </package>
     <package name="contexts.theme.themes">
@@ -307,22 +352,22 @@
       <file name="useDimension.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/hooks/useDimension.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
-        <line num="5" count="30" type="stmt"/>
-        <line num="6" count="30" type="stmt"/>
+        <line num="5" count="61" type="stmt"/>
+        <line num="6" count="61" type="stmt"/>
       </file>
       <file name="useStyle.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/hooks/useStyle.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="6" count="2" type="stmt"/>
-        <line num="7" count="30" type="stmt"/>
-        <line num="8" count="30" type="stmt"/>
-        <line num="9" count="30" type="stmt"/>
-        <line num="10" count="30" type="stmt"/>
+        <line num="7" count="61" type="stmt"/>
+        <line num="8" count="61" type="stmt"/>
+        <line num="9" count="61" type="stmt"/>
+        <line num="10" count="61" type="stmt"/>
       </file>
       <file name="useTheme.ts" path="/Users/alanlima/Documents/projetoPet/mobile/src/hooks/useTheme.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="2" type="stmt"/>
-        <line num="5" count="54" type="stmt"/>
-        <line num="6" count="54" type="stmt"/>
+        <line num="5" count="114" type="stmt"/>
+        <line num="6" count="114" type="stmt"/>
       </file>
     </package>
   </project>
