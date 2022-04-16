@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
 import {
-  PPInput,
+  PPControledInput,
   PPScreen,
   PPScrollView,
   PPSectionHeader,
@@ -12,17 +12,36 @@ import { PPButton } from "../../../components/PPButton/PPButton";
 import { useStyle } from "../../../hooks";
 import { GuestStackParamList } from "../../../routes/guest.routes";
 import { ForgetPasswordEmailStyle } from "./ForgetPasswordEmail.style";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
 
 type ForgetPasswordEmailScreenProp = NativeStackNavigationProp<
   GuestStackParamList,
   "ForgetPasswordEmail"
 >;
 
+type FormData = {
+  email: string;
+};
+
+const schema = yup.object({
+  email: yup.string().email("E-mail inválido").required("Informe o seu e-mail"),
+});
+
 export const ForgetPasswordEmail: React.FC = () => {
   const { goBack, navigate } = useNavigation<ForgetPasswordEmailScreenProp>();
   const style = useStyle(ForgetPasswordEmailStyle);
 
-  const onPressNext = () => {
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+  });
+
+  const handleNext = () => {
     navigate("ForgetPasswordCode");
   };
 
@@ -39,7 +58,10 @@ export const ForgetPasswordEmail: React.FC = () => {
           title="Esqueceu sua senha?"
           subTitle="Digite o seu e-mail cadastrado que iremos enviar um código para recuperação de sua senha"
         />
-        <PPInput
+        <PPControledInput
+          name="email"
+          control={control}
+          error={errors.email?.message}
           placeholder="E-mail"
           autoCapitalize="none"
           autoFocus
@@ -48,7 +70,7 @@ export const ForgetPasswordEmail: React.FC = () => {
         />
 
         <PPView style={style.wrapperSendButton}>
-          <PPButton text="Próximo" onPress={onPressNext} />
+          <PPButton text="Próximo" onPress={handleSubmit(handleNext)} />
         </PPView>
       </PPScrollView>
     </PPScreen>

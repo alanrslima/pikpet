@@ -8,6 +8,7 @@ export * from "./PPIcon/PPIcon";
 export * from "./PPCarousel/PPCarousel";
 export * from "./PPSectionHeader/PPSectionHeader";
 export * from "./PPCardItem/PPCardItem";
+export * from "./PPControledInput/PPControledInput";
 export {
   ScrollView as PPScrollView,
   View as PPView,

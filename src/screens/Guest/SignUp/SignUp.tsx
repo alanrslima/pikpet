@@ -1,9 +1,10 @@
 import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import React from "react";
+import { useForm } from "react-hook-form";
 import {
+  PPControledInput,
   PPIconProps,
-  PPInput,
   PPScreen,
   PPScrollView,
   PPSectionHeader,
@@ -14,16 +15,39 @@ import { PPText } from "../../../components/PPText/PPText";
 import { useStyle, useTheme } from "../../../hooks";
 import { GuestStackParamList } from "../../../routes/guest.routes";
 import { SignUpStyle } from "./SignUp.style";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 type SignUpScreenProp = NativeStackNavigationProp<
   GuestStackParamList,
   "SignUp"
 >;
 
+type FormData = {
+  email: string;
+  password: string;
+};
+
+const schema = yup.object({
+  email: yup.string().email("E-mail inválido").required("Informe o seu e-mail"),
+  password: yup
+    .string()
+    .min(6, "A senha deve ter ao menos 6 dígitos")
+    .required("Informe uma senha"),
+});
+
 export const SignUp: React.FC = () => {
   const style = useStyle(SignUpStyle);
   const { goBack, navigate } = useNavigation<SignUpScreenProp>();
   const { theme } = useTheme();
+
+  const {
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>({
+    resolver: yupResolver(schema),
+  });
 
   const loginSocial = [
     {
@@ -50,6 +74,10 @@ export const SignUp: React.FC = () => {
     navigate("SignIn");
   };
 
+  const handleSignUp = (data: FormData) => {
+    console.log(data);
+  };
+
   return (
     <PPScreen
       header={{
@@ -61,15 +89,25 @@ export const SignUp: React.FC = () => {
           title="Criar uma conta"
           subTitle="Crie uma conta, isso levará menos de 1 minuto, basta informar seu e-mail e uma senha segura"
         />
-        <PPInput
+        <PPControledInput
+          name="email"
+          control={control}
           placeholder="E-mail"
           icon={{ name: "mail" }}
+          error={errors.email?.message}
           autoCapitalize="none"
           keyboardType="email-address"
         />
-        <PPInput placeholder="Senha" icon={{ name: "lock" }} secureTextEntry />
+        <PPControledInput
+          name="password"
+          placeholder="Senha"
+          control={control}
+          error={errors.password?.message}
+          icon={{ name: "lock" }}
+          secureTextEntry
+        />
         <PPView style={style.wrapperSignUpButton}>
-          <PPButton text="Cadastrar" />
+          <PPButton onPress={handleSubmit(handleSignUp)} text="Cadastrar" />
         </PPView>
 
         <PPView style={style.wrapperOr}>

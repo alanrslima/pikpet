@@ -28,8 +28,8 @@ const colors: ThemeColorProps = {
   success: "rgba(106, 194,89,0.2)",
   on_success_primary: "rgba(106, 194,89,1)",
 
-  danger: "rgba(255, 0,0,0.2)",
-  on_danger_primary: "rgba(255, 0,0,1)",
+  danger: "rgba(255, 0,0,1)",
+  on_danger_primary: "rgba(255, 255,255,1)",
 };
 
 const spaces: ThemeSpaceProps = {
