@@ -28,7 +28,7 @@ export const PPHeaderStyle = (theme: ThemeProps): PPHeaderStyleProps => {
     containerButton: {
       height: 45,
       minWidth: 45,
-      backgroundColor: theme.colors.secundary,
+      backgroundColor: theme.colors.primary,
       justifyContent: "center",
       alignItems: "center",
       borderRadius: 10,

@@ -9,19 +9,25 @@ import * as Animatable from "react-native-animatable";
 interface IPScreen {
   header?: PPHeaderProps;
   loading?: boolean;
+  useSafeArea?: boolean;
   children?: JSX.Element | JSX.Element[];
 }
-export const PPScreen: React.FC<IPScreen> = ({ header, loading, children }) => {
+export const PPScreen: React.FC<IPScreen> = ({
+  header,
+  loading,
+  children,
+  useSafeArea = true,
+}) => {
   const style = useStyle(PPScreenStyle);
 
   return (
-    <View style={style.container}>
+    <View style={[style.container, useSafeArea && style.safeArea]}>
       {header && <PPHeader {...header} />}
       {loading ? (
         <PPLoading />
       ) : (
         <Animatable.View
-          style={style.container}
+          style={style.content}
           animation="fadeInUp"
           iterationCount={1}
         >

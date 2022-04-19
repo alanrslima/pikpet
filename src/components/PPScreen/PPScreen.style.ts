@@ -1,9 +1,10 @@
 import { StyleProp, StyleSheet, ViewStyle } from "react-native";
-import { ThemeProps } from "../../contexts/theme/type";
+import { ThemeProps } from "../../types/theme";
 
 interface PPScreenStyleProps {
   container?: StyleProp<ViewStyle>;
   content?: StyleProp<ViewStyle>;
+  safeArea?: StyleProp<ViewStyle>;
 }
 
 export const PPScreenStyle = (theme: ThemeProps): PPScreenStyleProps => {
@@ -11,10 +12,12 @@ export const PPScreenStyle = (theme: ThemeProps): PPScreenStyleProps => {
     container: {
       flex: 1,
       backgroundColor: theme.colors.background,
-      paddingBottom: 44,
     },
     content: {
       flex: 1,
+    },
+    safeArea: {
+      paddingBottom: 44,
     },
   });
 };

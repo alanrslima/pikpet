@@ -1,5 +1,5 @@
 import { StyleProp, StyleSheet, ViewStyle } from "react-native";
-import { ThemeProps } from "../../contexts/theme/type";
+import { ThemeProps } from "../../types/theme";
 
 interface PPCarouselStyleProps {
   container?: StyleProp<ViewStyle>;

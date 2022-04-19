@@ -3,7 +3,7 @@ import { TouchableOpacity, Image, View } from "react-native";
 import { useStyle, useTheme } from "../../hooks";
 import { PPText } from "../PPText/PPText";
 import { PPCardItemStyle } from "./PPCardItem.style";
-import ImageMock from "../../assets/images/bulldog.png";
+import ImageMock from "../../assets/images/banner.png";
 import { PPIcon } from "../PPIcon/PPIcon";
 
 interface PPCardItemProps {
@@ -26,17 +26,20 @@ export const PPCardItem: React.FC<PPCardItemProps> = ({ onPress }) => {
         </View>
 
         <View style={style.row}>
-          <PPIcon name="star" color={theme.colors.on_surface_secundary} />
+          <PPIcon
+            name="star"
+            type="font_awesome"
+            color={theme.colors.on_surface_secundary}
+          />
           <PPText
             color={theme.colors.on_surface_primary}
             weight="bold"
             size="small"
           >
-            {" "}
-            4.5{" "}
-            <PPText size="small" color={theme.colors.on_surface_secundary}>
-              (100)
-            </PPText>
+            4.5
+          </PPText>
+          <PPText size="small" color={theme.colors.on_surface_secundary}>
+            (100)
           </PPText>
         </View>
         <View></View>

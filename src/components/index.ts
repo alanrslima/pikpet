@@ -9,6 +9,8 @@ export * from "./PPCarousel/PPCarousel";
 export * from "./PPSectionHeader/PPSectionHeader";
 export * from "./PPCardItem/PPCardItem";
 export * from "./PPControledInput/PPControledInput";
+export * from "./ProfileIcon/ProfileIcon";
+export * from "./SelectionItem/SelectionItem";
 export {
   ScrollView as PPScrollView,
   View as PPView,

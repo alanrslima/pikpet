@@ -1,15 +1,17 @@
 import React from "react";
 import {
+  PPButton,
   PPImage,
   PPScreen,
   PPScrollView,
   PPSectionHeader,
   PPTouchableOpacity,
   PPView,
+  SelectionItem,
 } from "../../../components";
 import { useStyle } from "../../../hooks";
 import { StoreDetailStyle } from "./StoreDetail.style";
-import ImageMock from "../../../assets/images/bulldog.png";
+import ImageMock from "../../../assets/images/banner.png";
 import { useNavigation } from "@react-navigation/native";
 
 export const StoreDetail: React.FC = () => {
@@ -19,6 +21,7 @@ export const StoreDetail: React.FC = () => {
 
   return (
     <PPScreen
+      useSafeArea={false}
       header={{
         floating: true,
         leftButtons: [{ onPress: goBack, icon: { name: "arrow-left" } }],
@@ -40,12 +43,27 @@ export const StoreDetail: React.FC = () => {
         </PPScrollView>
 
         <PPView style={style.content}>
-          <PPSectionHeader
-            title="Descrição"
-            size="medium"
-            subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec diam eget quam viverra tincidunt eget a neque. Cras velit dolor, fringilla non justo in"
-          />
+          <PPSectionHeader subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec diam eget quam viverra tincidunt eget a neque. Cras velit dolor, fringilla non justo in" />
         </PPView>
+
+        <SelectionItem
+          title="Corte de cabelo"
+          description="Corte de cabelo na régua com profissionais de respeitos"
+          label="R$ 30,00"
+          selected
+        />
+        <SelectionItem
+          title="Corte de cabelo"
+          description="Corte de cabelo na régua com profissionais de respeitos"
+          label="R$ 30,00"
+        />
+        <SelectionItem
+          title="Corte de cabelo"
+          description="Corte de cabelo na régua com profissionais de respeitos"
+          label="R$ 30,00"
+        />
+
+        <PPButton text="Próximo" />
       </PPScrollView>
     </PPScreen>
   );

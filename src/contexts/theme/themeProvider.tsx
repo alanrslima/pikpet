@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ThemeContext } from "./themeContext";
-import { ThemeProps, ThemeDiscriminatorsType } from "./type";
 import * as Themes from "./themes";
 // import {StorageHelper} from '~/helpers/storage.helper';
 import { Platform, StatusBar } from "react-native";
+import { ThemeDiscriminatorsType, ThemeProps } from "../../types/theme";
 
 export const ThemeProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = useState(Themes.ThemeLight as ThemeProps);

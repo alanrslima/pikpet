@@ -55,8 +55,3 @@ export interface ThemeColorProps {
   danger: string;
   on_danger_primary: string;
 }
-
-export interface ThemeContextProps {
-  theme: ThemeProps;
-  handleTheme: (type: ThemeDiscriminatorsType) => void;
-}

@@ -8,10 +8,10 @@ import {
   PPView,
   PPIcon,
   PPSectionHeader,
-  PPCarousel,
   PPScrollView,
   PPCardItem,
   PPInput,
+  ProfileIcon,
 } from "../../../components";
 import { useStyle, useTheme } from "../../../hooks";
 import { LoggedStackParamList } from "../../../routes/logged.routes";
@@ -28,49 +28,47 @@ export const Home: React.FC = () => {
     navigate("StoreDetail");
   };
 
+  const onPressAddress = () => {
+    navigate("Adresses");
+  };
+
   return (
     <PPSafeAreaView style={style.container}>
       <PPScrollView>
-        {/* Location Picker */}
-        <PPTouchableOpacity style={style.wrapperItem}>
-          <PPText color={theme.colors.on_background_secundary}>
-            Localização atual
-          </PPText>
-          <PPView style={style.row}>
-            <PPText
-              size="heading_4"
-              color={theme.colors.on_background_primary}
-              weight="bold"
-            >
-              Goiânia, Goias
+        <PPView style={style.wrapperHeader}>
+          <PPTouchableOpacity onPress={onPressAddress}>
+            <PPText color={theme.colors.on_background_secundary}>
+              Localização atual
             </PPText>
-            <PPIcon name="chevron-down" size={20} />
-          </PPView>
-        </PPTouchableOpacity>
+            <PPView style={style.row}>
+              <PPText
+                size="heading_4"
+                color={theme.colors.on_background_primary}
+                weight="bold"
+              >
+                Goiânia, Goias
+              </PPText>
+              <PPIcon name="chevron-down" size={20} />
+            </PPView>
+          </PPTouchableOpacity>
+
+          <ProfileIcon />
+        </PPView>
+        {/* Location Picker */}
 
         {/* Search */}
         <PPView style={style.wrapperItem}>
           <PPInput
-            iconName="search"
+            icon={{ name: "search" }}
             placeholder="Pesquisar"
             borderColor="transparent"
             bgColor={theme.colors.on_background_disable}
           />
         </PPView>
 
-        {/* Pets carrousel */}
-        <PPView style={style.wrapperItem}>
-          <PPCarousel />
-        </PPView>
-
-        {/* Scroll horizontal */}
-        <PPView style={style.wrapperItem}>
-          <PPSectionHeader size="medium" title="Perto de você" />
-        </PPView>
-
         {/* Melhores avalidados */}
         <PPView style={style.wrapperItem}>
-          <PPSectionHeader size="medium" title="Melhores avaliados" />
+          <PPSectionHeader titleSize="heading_3" title="Próximos de você" />
         </PPView>
 
         <PPCardItem onPress={onPressStore} />

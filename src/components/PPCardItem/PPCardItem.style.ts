@@ -1,6 +1,5 @@
 import { ImageStyle, StyleProp, StyleSheet, ViewStyle } from "react-native";
-import { ThemeProps } from "../../contexts/theme/type";
-import {} from "react";
+import { ThemeProps } from "../../types/theme";
 
 interface PPCardItemStyleProps {
   container?: StyleProp<ViewStyle>;
@@ -18,11 +17,11 @@ export const PPCardItemStyle = (theme: ThemeProps): PPCardItemStyleProps => {
       shadowColor: "rgba(0,0,0,1)",
       shadowOffset: { width: 2, height: 2 },
       shadowOpacity: 0.2,
-      shadowRadius: 5,
+      shadowRadius: 10,
       elevation: 5,
       flexDirection: "row",
       marginHorizontal: theme.spaces.space_5,
-      marginBottom: theme.spaces.space_3,
+      marginBottom: theme.spaces.space_4,
     },
     image: {
       height: 80,

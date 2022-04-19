@@ -89,6 +89,7 @@ export const PPText: React.FC<IPPText> = (props) => {
     <Text
       {...rest}
       style={[
+        rest.style,
         { color, textAlign: align, fontSize: getFontSize() },
         getWeightStyle(),
       ]}

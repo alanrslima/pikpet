@@ -1,6 +1,6 @@
 import { ImageStyle, StyleProp, StyleSheet, ViewStyle } from "react-native";
 import { DimensionProps } from "../../../contexts/dimension/type";
-import { ThemeProps } from "../../../contexts/theme/type";
+import { ThemeProps } from "../../../types/theme";
 
 interface StoreDetailStyleProps {
   wrapperImage: StyleProp<ViewStyle>;
@@ -16,7 +16,7 @@ export const StoreDetailStyle = (
 ): StoreDetailStyleProps => {
   return StyleSheet.create({
     wrapperImage: {
-      height: dimension.height * 0.45,
+      height: dimension.height * 0.4,
       backgroundColor: "red",
       borderRadius: 40,
       margin: theme.spaces.space_3,

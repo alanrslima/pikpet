@@ -3,10 +3,10 @@ import {
   ThemeColorProps,
   ThemeFontProps,
   ThemeSpaceProps,
-} from "../type";
+} from "../../../types/theme";
 
 const colors: ThemeColorProps = {
-  primary: "rgba(1,176,156,1)",
+  primary: "#333333",
   secundary: "rgba(241, 154, 62, 1)",
 
   background: "#FFF",

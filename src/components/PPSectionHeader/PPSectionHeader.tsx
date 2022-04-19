@@ -21,14 +21,16 @@ export const PPSectionHeader: React.FC<PSectionHeaderProps> = ({
 
   return (
     <View>
-      <PPText
-        size={titleSize}
-        weight="bold"
-        testID="ppsectionheader_title"
-        color={theme.colors.on_background_primary}
-      >
-        {title}
-      </PPText>
+      {title && title.length > 0 && (
+        <PPText
+          size={titleSize}
+          weight="bold"
+          testID="ppsectionheader_title"
+          color={theme.colors.on_background_primary}
+        >
+          {title}
+        </PPText>
+      )}
       {subTitle && subTitle.length > 0 && (
         <View style={style.wrapperSubTitle}>
           <PPText

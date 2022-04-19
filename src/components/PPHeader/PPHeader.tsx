@@ -1,6 +1,6 @@
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
-import { useStyle } from "../../hooks";
+import { useStyle, useTheme } from "../../hooks";
 import { PPIcon, PPIconProps } from "../PPIcon/PPIcon";
 import { PPText } from "../PPText/PPText";
 import { PPHeaderStyle } from "./PPHeader.style";
@@ -32,11 +32,12 @@ export const PPHeader: React.FC<PPHeaderProps> = ({
   floating,
 }) => {
   const style = useStyle(PPHeaderStyle);
+  const { theme } = useTheme();
 
   return (
     <View style={[style.container, floating && style.floating]}>
       <View style={style.wrapperTitle}>
-        <PPText color="white">{title}</PPText>
+        <PPText color={theme.colors.on_background_primary}>{title}</PPText>
       </View>
 
       <View style={style.wrapperButtons}>
